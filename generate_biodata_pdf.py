@@ -70,7 +70,7 @@ class PremiumBiodataPDF:
         self.c.setFont("Helvetica-Oblique", 11)
         self.c.drawString(self.left + 18, banner_y + 62, "Building a meaningful life with values, ambition, and simplicity.")
 
-        chips = ["Age 25", "5.9''", "Hindu, Suri", "Hindi, Maithili, English"]
+        chips = ["Age 27", "5.9''", "Hindu, Suri", "Hindi, Maithili, English"]
         chip_x = self.left + 18
         chip_y = banner_y + 30
         for chip in chips:
@@ -153,7 +153,7 @@ class PremiumBiodataPDF:
             col_w,
             "About Me",
             [
-                "Saurabh Kumar, 25 years old, currently based in Kolkata.",
+                "Saurabh Kumar, 27 years old, currently based in Kolkata.",
                 "Grounded, calm, and family-oriented with modern outlook.",
                 "Believes in trust, consistency, and mutual respect in marriage.",
                 "Rooted in values and focused on building a meaningful life.",
