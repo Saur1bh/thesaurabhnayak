@@ -325,6 +325,7 @@ p {
 
 .photo-openable {
   cursor: zoom-in;
+  touch-action: manipulation;
 }
 
 .avatar {

@@ -278,6 +278,9 @@
       let swipeStartX = 0;
       let swipeStartY = 0;
       let swipeActive = false;
+      let imageTapStartX = 0;
+      let imageTapStartY = 0;
+      let imageTapStartTime = 0;
 
       function clamp(value, min, max) {
         return Math.min(Math.max(value, min), max);
@@ -361,6 +364,26 @@
         img.setAttribute("aria-label", "Open full photo");
 
         img.addEventListener("click", () => openModalByIndex(index));
+        img.addEventListener("touchstart", (event) => {
+          if (event.touches.length !== 1) return;
+          imageTapStartX = event.touches[0].clientX;
+          imageTapStartY = event.touches[0].clientY;
+          imageTapStartTime = Date.now();
+        }, { passive: true });
+
+        img.addEventListener("touchend", (event) => {
+          if (event.changedTouches.length !== 1) return;
+          const touch = event.changedTouches[0];
+          const deltaX = Math.abs(touch.clientX - imageTapStartX);
+          const deltaY = Math.abs(touch.clientY - imageTapStartY);
+          const duration = Date.now() - imageTapStartTime;
+
+          // Mobile fallback: treat short, low-movement touch as tap-to-open.
+          if (deltaX < 10 && deltaY < 10 && duration < 320) {
+            openModalByIndex(index);
+          }
+        }, { passive: true });
+
         img.addEventListener("keydown", (event) => {
           if (event.key === "Enter" || event.key === " ") {
             event.preventDefault();
