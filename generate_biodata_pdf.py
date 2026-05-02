@@ -85,11 +85,7 @@ class PremiumBiodataPDF:
             chip_x += chip_w + 6
 
         photo_candidates = [PRIMARY_PHOTO, SECONDARY_PHOTO, TERTIARY_PHOTO]
-        available_photos = [photo for photo in photo_candidates if photo.exists()]
-
-        primary_photo = available_photos[0] if available_photos else None
-        secondary_photo = available_photos[1] if len(available_photos) > 1 else None
-        tertiary_photo = available_photos[2] if len(available_photos) > 2 else None
+        primary_photo = next((photo for photo in photo_candidates if photo.exists()), None)
 
         if primary_photo is not None:
             try:
@@ -100,32 +96,6 @@ class PremiumBiodataPDF:
                 frame_y = banner_y + 10
                 self.c.setFillColor(colors.HexColor("#e8cfaa"))
                 self.c.roundRect(frame_x - 5, frame_y - 5, frame_w + 10, frame_h + 10, 12, stroke=0, fill=1)
-                self.c.drawImage(image, frame_x, frame_y, width=frame_w, height=frame_h, preserveAspectRatio=True, mask="auto")
-            except Exception:
-                pass
-
-        if secondary_photo is not None:
-            try:
-                image = ImageReader(str(secondary_photo))
-                frame_w = 56
-                frame_h = 68
-                frame_x = self.right - frame_w - 22
-                frame_y = banner_y + 8
-                self.c.setFillColor(colors.HexColor("#f7e8d2"))
-                self.c.roundRect(frame_x - 4, frame_y - 4, frame_w + 8, frame_h + 8, 9, stroke=0, fill=1)
-                self.c.drawImage(image, frame_x, frame_y, width=frame_w, height=frame_h, preserveAspectRatio=True, mask="auto")
-            except Exception:
-                pass
-
-        if tertiary_photo is not None:
-            try:
-                image = ImageReader(str(tertiary_photo))
-                frame_w = 56
-                frame_h = 68
-                frame_x = self.right - frame_w - 84
-                frame_y = banner_y + 8
-                self.c.setFillColor(colors.HexColor("#f7e8d2"))
-                self.c.roundRect(frame_x - 4, frame_y - 4, frame_w + 8, frame_h + 8, 9, stroke=0, fill=1)
                 self.c.drawImage(image, frame_x, frame_y, width=frame_w, height=frame_h, preserveAspectRatio=True, mask="auto")
             except Exception:
                 pass
