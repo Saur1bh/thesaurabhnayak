@@ -216,6 +216,8 @@ class PremiumBiodataPDF:
             [
                 "Father: Mr. Ram Naresh Nayak (Businessman)",
                 "Mother: Mrs. Nitu Nayak (AWS)",
+                "Grandfather: Late Mr. Brij Mohan Nayak (Businessman)",
+                "Grandmother: Late Mrs. Chandrakala Devi (Homemaker)",
                 "Brother: Gaurav Kumar (Student (B.Sc., B.Ed.))",
                 "Family values: Respect, warmth, and togetherness.",
                 "Facebook: thesaurabhnayak",
