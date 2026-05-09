@@ -215,8 +215,8 @@ class PremiumBiodataPDF:
             "Family Background",
             [
                 "Father: Mr. Ram Naresh Nayak (Businessman)",
-                "Mother: Mrs. Nitu Nayak (Anganwadi Sevika)",
-                "Brother: Gaurav Kumar (Student)",
+                "Mother: Mrs. Nitu Nayak (AWS)",
+                "Brother: Gaurav Kumar (Student (B.Sc., B.Ed.))",
                 "Family values: Respect, warmth, and togetherness.",
                 "Facebook: thesaurabhnayak",
             ],
