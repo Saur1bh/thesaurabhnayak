@@ -919,4 +919,10 @@ a:focus-visible {
   .shot-main .photo-media {
     height: 210px;
   }
+
+  .gallery-grid > .shot:nth-child(2) .photo-media {
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
+  }
 }
