@@ -198,7 +198,7 @@ class PremiumBiodataPDF:
             col_w,
             "Personal Snapshot",
             [
-                "Date of Birth: 20/10/1999",
+                "Date of Birth: 16/06/1999",
                 "Height: 5.9''",
                 "Religion: Hindu",
                 "Caste: Suri",
