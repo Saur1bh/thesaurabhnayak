@@ -218,7 +218,7 @@ class PremiumBiodataPDF:
                 "Mother: Mrs. Nitu Nayak (AWS)",
                 "Grandfather: Late Mr. Brij Mohan Nayak (Businessman)",
                 "Grandmother: Late Mrs. Chandrakala Devi (Homemaker)",
-                "Brother: Gaurav Kumar (Student (B.Sc., B.Ed.))",
+                "Brother: Gaurav Kumar (Teacher (DAV Public School))",
                 "Family values: Respect, warmth, and togetherness.",
                 "Facebook: thesaurabhnayak",
             ],
